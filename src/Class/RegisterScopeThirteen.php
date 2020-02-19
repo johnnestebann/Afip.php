@@ -1,21 +1,21 @@
 <?php
 /**
- * SDK for AFIP Register Scope Four (ws_sr_padron_a4)
+ * SDK for AFIP Register Scope Ten (ws_sr_padron_a13)
  * 
- * @link http://www.afip.gob.ar/ws/ws_sr_padron_a4/manual_ws_sr_padron_a4_v1.1.pdf WS Specification
+ * @link http://www.afip.gob.ar/ws/ws-padron-a13/manual-ws-sr-padron-a13-v1.2.pdf WS Specification
  *
- * @author 	Ivan Muñoz
+ * @author 	Afip SDK
  * @package Afip
  * @version 1.0
  **/
 
-class RegisterScopeFour extends AfipWebService {
+class RegisterScopeThirteen extends AfipWebService {
 
 	var $soap_version 	= SOAP_1_1;
-	var $WSDL 			= 'ws_sr_padron_a4-production.wsdl';
-	var $URL 			= 'https://aws.afip.gov.ar/sr-padron/webservices/personaServiceA4';
-	var $WSDL_TEST 		= 'ws_sr_padron_a4.wsdl';
-	var $URL_TEST 		= 'https://awshomo.afip.gov.ar/sr-padron/webservices/personaServiceA4';
+	var $WSDL 			= 'ws_sr_padron_a13-production.wsdl';
+	var $URL 			= 'https://aws.afip.gov.ar/sr-padron/webservices/personaServiceA13';
+	var $WSDL_TEST 		= 'ws_sr_padron_a13.wsdl';
+	var $URL_TEST 		= 'https://awshomo.afip.gov.ar/sr-padron/webservices/personaServiceA13';
 
 	/**
 	 * Asks to web service for servers status {@see WS 
@@ -46,7 +46,7 @@ class RegisterScopeFour extends AfipWebService {
 	**/
 	public function GetTaxpayerDetails($identifier)
 	{
-		$ta = $this->afip->GetServiceTA('ws_sr_padron_a4');
+		$ta = $this->afip->GetServiceTA('ws_sr_padron_a13');
 		
 		$params = array(
 			'token' 			=> $ta->token,
